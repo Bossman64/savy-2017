@@ -70,7 +70,7 @@ while loop_control == True:
     spaces2 = spaces*z
     space_list = [spaces2]
     print space_list
-    print word
+    # print word
     # Question & info
     print "\nNumber of guesses left: ", guesses
     print "Letters guessed: ", already_guessed
