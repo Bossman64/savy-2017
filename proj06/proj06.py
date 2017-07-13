@@ -1,5 +1,5 @@
-# Name:
-# Date:
+# Name: Zeke Cook and Trey Owen
+# Date: July 2017
 
 
 # proj06: Hangman
@@ -44,5 +44,21 @@ def choose_word(wordlist):
 # the wordlist variable so that it can be accessed from anywhere
 # in the program
 wordlist = load_words()
+a = choose_word(wordlist)
 
 # your code begins here!
+already_guessed = []
+guesses = 10
+word = []
+for letter in a:
+    word.append(letter)
+
+print "\nWelcome to HangmanPro! By Zeke Cook & Trey Owen."
+eeee = raw_input("Press ENTER")
+print ""
+
+word.append(random)
+print "Number of guesses left: ", guesses
+print word
+
+print "Letters guessed: ", already_guessed
