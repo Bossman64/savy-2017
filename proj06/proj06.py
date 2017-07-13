@@ -77,8 +77,10 @@ while loop_control == True:
 
     user_guess = raw_input("What letter would you like to guess: ")
     if user_guess in word:
-
-
+        print "\nThat is correct! There is a(n)", user_guess, "."
+    elif guesses == 1:
+        loop_control = False
+        print "\nSorry, you ran out of guesses. Please try again."
     else:
-
-    guesses = guesses - 1
+        guesses = guesses - 1
+        print "\nSorry, inncorrect."
