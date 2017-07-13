@@ -47,9 +47,11 @@ wordlist = load_words()
 a = choose_word(wordlist)
 
 # your code begins here!
+z = "_ "
 already_guessed = []
 guesses = 10
 word = []
+spaces = []
 for letter in a:
     word.append(letter)
 
@@ -57,8 +59,26 @@ print "\nWelcome to HangmanPro! By Zeke Cook & Trey Owen."
 eeee = raw_input("Press ENTER")
 print ""
 
-word.append(random)
-print "Number of guesses left: ", guesses
-print word
 
-print "Letters guessed: ", already_guessed
+loop_control = True
+
+while loop_control == True:
+
+    word.append(random)
+    # Print spaces
+    spaces = len(word)
+    spaces2 = spaces*z
+    space_list = [spaces2]
+    print space_list
+    print word
+    # Question & info
+    print "\nNumber of guesses left: ", guesses
+    print "Letters guessed: ", already_guessed
+
+    user_guess = raw_input("What letter would you like to guess: ")
+    if user_guess in word:
+
+
+    else:
+
+    guesses = guesses - 1
