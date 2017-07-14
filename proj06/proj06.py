@@ -48,6 +48,7 @@ a = choose_word(wordlist)
 print a
 
 
+
 # your code begins here!
 blank = 0
 z = "_"
@@ -78,7 +79,7 @@ while loop_control == True:
 
     user_guess = raw_input("What letter would you like to guess: \n")
     if len(user_guess)>1:
-        if user_guess==word:
+        if user_guess==a :
             print ' Congratulations, you guesses my word!!!'
             loop_control = False
         else:
@@ -104,8 +105,20 @@ while loop_control == True:
             loop_control = False
             print "\nSorry, you ran out of guesses. Please try again."
             print word
+            print'____\n' \
+                 '|   |\n' \
+                 '|   O\n' \
+                 '|   |\n' \
+                 '|  /|\\\n' \
+                 '|  / \\\n' \
+                 '______'
+
         else:
             guesses = guesses - 1
             print "\nSorry, inncorrect."
 
             already_guessed.append(user_guess)
+        if spaces == word :
+            loop_control = False
+            print 'congratulations you guessed my word\n'
+            print word
