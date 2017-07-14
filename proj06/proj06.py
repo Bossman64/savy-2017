@@ -61,6 +61,7 @@ for letter in a:
 print "\nWelcome to HangmanPro! By Zeke Cook & Trey Owen."
 eeee = raw_input("Press ENTER")
 print ""
+print 'PLEASE, do not type whole words, this program will read it as incorrect.\nThanks,\ncreators.\n'
 
 
 loop_control = True
@@ -78,6 +79,9 @@ while loop_control == True:
     print "Letters guessed: ", already_guessed
 
     user_guess = raw_input("What letter would you like to guess: \n")
+
+
+
     if user_guess in word:
         print "\nThat is correct! There is a(n)", user_guess, "."
 
@@ -90,7 +94,6 @@ while loop_control == True:
                 # Co
                 spaces[spaces_counter] = user_guess
             spaces_counter = spaces_counter + 1
-
     elif guesses == 1:
         loop_control = False
         print "\nSorry, you ran out of guesses. Please try again."
