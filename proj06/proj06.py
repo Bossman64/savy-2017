@@ -47,6 +47,7 @@ wordlist = load_words()
 a = choose_word(wordlist)
 print a
 
+
 # your code begins here!
 blank = 0
 z = "_"
@@ -61,14 +62,11 @@ for letter in a:
 print "\nWelcome to HangmanPro! By Zeke Cook & Trey Owen."
 eeee = raw_input("Press ENTER")
 print ""
-print 'PLEASE, do not type whole words, this program will read it as incorrect.\nThanks,\ncreators.\n'
 
 
 loop_control = True
 
 while loop_control == True:
-
-
 
     # Print spaces
 
@@ -79,27 +77,35 @@ while loop_control == True:
     print "Letters guessed: ", already_guessed
 
     user_guess = raw_input("What letter would you like to guess: \n")
+    if len(user_guess)>1:
+        if user_guess==word:
+            print ' Congratulations, you guesses my word!!!'
+            loop_control = False
+        else:
+            print 'Sorry thats not my word, Guess again.'
+            guesses = guesses - 1
 
 
 
-    if user_guess in word:
-        print "\nThat is correct! There is a(n)", user_guess, "."
-
-        # Insert
-        looop = True
-        spaces_counter = 0
-
-        while spaces_counter < len(word):
-            if user_guess in word[spaces_counter]:
-                # Co
-                spaces[spaces_counter] = user_guess
-            spaces_counter = spaces_counter + 1
-    elif guesses == 1:
-        loop_control = False
-        print "\nSorry, you ran out of guesses. Please try again."
-        print word
     else:
-        guesses = guesses - 1
-        print "\nSorry, inncorrect."
+        if user_guess in word:
+            print "\nThat is correct! There is a(n)", user_guess, "."
 
-        already_guessed.append(user_guess)
+            # Insert
+            looop = True
+            spaces_counter = 0
+
+            while spaces_counter < len(word):
+                if user_guess in word[spaces_counter]:
+                    # Co
+                    spaces[spaces_counter] = user_guess
+                spaces_counter = spaces_counter + 1
+        elif guesses == 1:
+            loop_control = False
+            print "\nSorry, you ran out of guesses. Please try again."
+            print word
+        else:
+            guesses = guesses - 1
+            print "\nSorry, inncorrect."
+
+            already_guessed.append(user_guess)
